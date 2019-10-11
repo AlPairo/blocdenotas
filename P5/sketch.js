@@ -12,7 +12,7 @@ function setup() {
   createCanvas(400, 400);
   noLoop();
   noStroke();
-  slider = createSlider(20,400,20,20);
+  slider = createSlider(40,400,40,40);
   slider.position(100,height);
   slider.style('width','100px');
 }
