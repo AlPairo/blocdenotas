@@ -1,4 +1,3 @@
-//var scl=80;
 var slider;
 var scl;
 var paleta=[
@@ -9,16 +8,17 @@ var paleta=[
     "ef2917"
 ];
 function setup() {
-  createCanvas(400, 400);
+  let base=createCanvas(400, 400); //Crea la base para el programa
+  base.parent('espacio');  //Mete el sketch en el div con id 'espacio'
   noLoop();
-  noStroke();
-  slider = createSlider(40,400,40,40);
-  slider.position(100,height);
-  slider.style('width','100px');
+  noStroke()
+  slider = createSlider(40,400,40,40); //Slider, minimo,maximo,valor_inicial,step
+  slider.style('width','200px');
+  slider.parent('modifiers') //Mete el slider en el div con id 'modifiers'
 }
 
 function draw() {
-	background(255);
+	background(192,192,192);
 	var scl=slider.value();
 	console.log(scl);
 	for (let x=0;x<width;x+=scl){
