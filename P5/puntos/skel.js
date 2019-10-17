@@ -21,15 +21,19 @@ function setup() {
   background(0);
   stroke(255);
   strokeWeight(4);
+  noLoop();
 }
 
 function draw() {
 var cant=slider.value();
 var scl=width/4;
 for(let a=scl; a<width;a+=scl){
-for(let b=scl; b<width;b+=scl){
-puntos.push(new punto());
+for(let b=scl; b<height;b+=scl){
+puntos.push(new punto(a,b,true));
 }
+}
+for(let j=0;j<puntos.length;j++){
+	point(puntos[j].posX,puntos[j].posY);
 }
 }
 
@@ -37,9 +41,4 @@ function punto(x,y,libre){
 	this.posX=x;
 	this.posY=y;
 	this.disponible=libre;
-	this. = function() {return this.firstName + " " + this.lastName;};
-//Averiguar si es viable hacer getters y setters, 
-//probablemente sea medio al pedo hacer, simplemente habria que hacer para la disponibilidad
-// getters para todo y setter para disponible?
-
 }
