@@ -15,30 +15,45 @@ var puntos=[];
 function setup() {
   let base=createCanvas(400, 400); //Crea la base para el programa
   base.parent('espacio');  //Mete el sketch en el div con id 'espacio'
-  slider = createSlider(0,100,0,10); //Slider, minimo,maximo,valor_inicial,step
-  slider.style('width','200px');
-  slider.parent('modifiers') //Mete el slider en el div con id 'modifiers'
-  background(0);
   stroke(255);
   strokeWeight(4);
+  noFill();
   noLoop();
+  drawGrid();
 }
 
 function draw() {
-var cant=slider.value();
-var scl=width/4;
-for(let a=scl; a<width;a+=scl){
-for(let b=scl; b<height;b+=scl){
-puntos.push(new punto(a,b,true));
+background(164,164,164);
+puntos.forEach(function(element){
+    element.disponible=true;
+});
+beginShape();
+for(let d=0;d<200;d++){
+	let r=int(random(0,puntos.length));
+	if(puntos[r].disponible==true){
+		curveVertex(puntos[r].posX,puntos[r].posY);
+		puntos[r].disponible=false;
+	}
 }
-}
-for(let j=0;j<puntos.length;j++){
-	point(puntos[j].posX,puntos[j].posY);
-}
+endShape();
 }
 
 function punto(x,y,libre){
 	this.posX=x;
 	this.posY=y;
 	this.disponible=libre;
+}
+
+function mousePressed(){
+	draw();
+}
+
+function drawGrid(){
+var scl=width/4;
+for(let a=scl; a<width;a+=scl){
+for(let b=scl; b<height;b+=scl){
+puntos.push(new punto(a,b,true));
+point(a,b);
+}
+}
 }
