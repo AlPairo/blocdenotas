@@ -5,7 +5,8 @@
 	font-size: 20px;
 }
 body{
-	background-color: silver;
+	margin: 0px;
+	padding: 0px;
 }
 #titulo{
 	font-family: 'Montserrat', sans-serif;
@@ -26,7 +27,6 @@ body{
 #espacio{
 	margin: 10px;
 	text-align: center;
-    background-color: silver;
 }
 #modifiers{
 	text-align: center;

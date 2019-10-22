@@ -15,7 +15,7 @@ var puntos=[];
 function setup() {
   let base=createCanvas(400, 400); //Crea la base para el programa
   base.parent('espacio');  //Mete el sketch en el div con id 'espacio'
-  stroke(255);
+  stroke(0);
   strokeWeight(4);
   noFill();
   noLoop();
@@ -23,12 +23,12 @@ function setup() {
 }
 
 function draw() {
-background(164,164,164);
+	background(255);
 puntos.forEach(function(element){
     element.disponible=true;
 });
 beginShape();
-for(let d=0;d<200;d++){
+for(let d=0;d<puntos.length;d++){
 	let r=int(random(0,puntos.length));
 	if(puntos[r].disponible==true){
 		curveVertex(puntos[r].posX,puntos[r].posY);
