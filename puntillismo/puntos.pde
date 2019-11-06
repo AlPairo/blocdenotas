@@ -1,8 +1,8 @@
 PImage pic;
 
 void setup() {
-  size(500, 200);
-  pic=loadImage("pic.jpg");
+  size(800, 500);
+  pic=loadImage("picaso.png");
   pic.filter(GRAY);
   image(pic, 0, 0);
 }
@@ -69,7 +69,8 @@ void draw() {
     }
   }  
   pic.updatePixels();
-  image(pic, 250, 0);
+  image(pic, 400, 0);
+  save("diagonal.png");
 }
 
 int index(int x, int y) {
