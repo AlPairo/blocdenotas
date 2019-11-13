@@ -4,9 +4,6 @@ function setup() {
   /*slider = createSlider(0,100,0,10); //Slider, minimo,maximo,valor_inicial,step
   slider.style('width','200px');
   slider.parent('modifiers') //Mete el slider en el div con id 'modifiers'*/
-  boton = createButton('Generar');
-  boton.parent('modifiers');
-  boton.mouseClicked(redraw);
   noLoop();
   strokeWeight(30);
   }

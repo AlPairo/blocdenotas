@@ -10,14 +10,17 @@
 	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div style="display: block;">
 	<div id="header">
 		<p id="titulo">skel</p> <!-- Cambiar el titulo de la pagina -->
 		<br>
 		<a href="./index.html" id="subtitulo">Volver</a>
 	</div>
-    <div id="espacio">
-    	<div id="modifiers"><p>modifier 1</p>
-         <button onclick="saveCanvas('canvas.png')"> Guardar </button> </div>
-	</div>
+    <div id="espacio"></div>
+    <div id="modifiers"><p>modifier 1</p>
+         <button onclick="saveCanvas('canvas.png')"> Guardar </button> 
+        <button onmousedown="draw()">Generar</button>
+     </div>
+     </div>
 </body>
 </html>

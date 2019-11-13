@@ -23,12 +23,11 @@ function setup() {
 }
 
 function draw() {
-	background(255);
 puntos.forEach(function(element){
     element.disponible=true;
 });
 beginShape();
-for(let d=0;d<puntos.length;d++){
+for(let d=0;d<30;d++){
 	let r=int(random(0,puntos.length));
 	if(puntos[r].disponible==true){
 		curveVertex(puntos[r].posX,puntos[r].posY);
@@ -44,14 +43,10 @@ function punto(x,y,libre){
 	this.disponible=libre;
 }
 
-function mousePressed(){
-	draw();
-}
-
 function drawGrid(){
 var scl=width/4;
-for(let a=scl; a<width;a+=scl){
-for(let b=scl; b<height;b+=scl){
+for(let a=0; a<width;a+=scl){
+for(let b=0; b<height;b+=scl){
 puntos.push(new punto(a,b,true));
 point(a,b);
 }
