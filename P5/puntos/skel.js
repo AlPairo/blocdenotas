@@ -45,8 +45,8 @@ function punto(x,y,libre){
 
 function drawGrid(){
 var scl=width/4;
-for(let a=0; a<width;a+=scl){
-for(let b=0; b<height;b+=scl){
+for(let a=30; a<width-30;a+=scl){
+for(let b=30; b<height-30;b+=scl){
 puntos.push(new punto(a,b,true));
 point(a,b);
 }
