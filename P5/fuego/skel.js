@@ -52,25 +52,6 @@ function cosX(val1,val2,val3){
 		let b=y*val3;
 		var a=cos(y)*val1;
 		curveVertex(a,b);	
-<<<<<<< Updated upstream
-		line(-width,height,a,b);
-		line(a,b,width,height);
-	}
-	endShape();
-	stroke(255,255,0);
-	beginShape(CURVE);
-	for (let y=1;y<height;y+=val2){
-		let b=y*val3;
-		if(prob<0.5){
-	var a=sin(y)*val1;
-			curveVertex(a,b);	
-	
-		}else{
-	var a=sin(y)*val1;
-			curveVertex(a,b);	
-		}
-=======
->>>>>>> Stashed changes
 		line(-width,height,a,b);
 		line(a,b,width,height);
 	
