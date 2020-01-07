@@ -2,8 +2,11 @@ function setup()
 {
   base=createCanvas(800, 400); //Crea la base para el programa
   base.parent('espacio');  //Mete el sketch en el div con id 'espacio'
+<<<<<<< Updated upstream
   slider1=createSlider(-width,width,0,1);
   slider2=createSlider(0.01,2,1.5,0.03);
+=======
+>>>>>>> Stashed changes
   stroke(255);
   slider1=createSlider(-height,height,1,1);
   slider2=createSlider(0.07,2,1.5,0.03);
@@ -49,6 +52,7 @@ function cosX(val1,val2,val3){
 		let b=y*val3;
 		var a=cos(y)*val1;
 		curveVertex(a,b);	
+<<<<<<< Updated upstream
 		line(-width,height,a,b);
 		line(a,b,width,height);
 	}
@@ -65,6 +69,8 @@ function cosX(val1,val2,val3){
 	var a=sin(y)*val1;
 			curveVertex(a,b);	
 		}
+=======
+>>>>>>> Stashed changes
 		line(-width,height,a,b);
 		line(a,b,width,height);
 	

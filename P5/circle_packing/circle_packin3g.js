@@ -13,6 +13,7 @@ function setup()
   slider3.parent('slider3');
   background(0);
   stroke(255);
+<<<<<<< Updated upstream
   noLoop();
 }
 
@@ -23,5 +24,11 @@ function draw(){
 	var totalCircles = 500;
 	var createCircleAttempts = 500;
 
+=======
+}
+
+function draw(){
+	
+>>>>>>> Stashed changes
 } 
 
