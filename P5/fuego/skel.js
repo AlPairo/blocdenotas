@@ -2,14 +2,11 @@ function setup()
 {
   base=createCanvas(800, 400); //Crea la base para el programa
   base.parent('espacio');  //Mete el sketch en el div con id 'espacio'
-<<<<<<< Updated upstream
   slider1=createSlider(-width,width,0,1);
   slider2=createSlider(0.01,2,1.5,0.03);
-=======
   stroke(255);
   slider1=createSlider(-height,height,1,1);
   slider2=createSlider(0.07,2,1.5,0.03);
->>>>>>> Stashed changes
   slider3=createSlider(1,150,75,2);
   slider1.style('width','200px');
   slider2.style('width','200px');
@@ -34,7 +31,6 @@ function cosX(val1,val2,val3){
 	//val1 es la "amplitud de onda" => la escala de f(x)
 	//val3 es la "longitud de onda" => la escala de x
 	//val2 es el intervalo entre un punto y otro
-<<<<<<< Updated upstream
 	beginShape(CURVE);
 	for (let y=1;y<height;y+=val2){
 		let b=y*val3;
@@ -46,7 +42,6 @@ function cosX(val1,val2,val3){
 			var a=cos(y)*val1;
 			curveVertex(a,b);	
 		}
-=======
 	beginShape();
 	//curveVertex(0,0);
 	for (let y=0;y<height;y+=val2)
@@ -54,7 +49,6 @@ function cosX(val1,val2,val3){
 		let b=y*val3;
 		var a=cos(y)*val1;
 		curveVertex(a,b);	
->>>>>>> Stashed changes
 		line(-width,height,a,b);
 		line(a,b,width,height);
 	}
@@ -76,4 +70,4 @@ function cosX(val1,val2,val3){
 	
 	endShape();
 	}
-} 
+} }

@@ -13,9 +13,15 @@ function setup()
   slider3.parent('slider3');
   background(0);
   stroke(255);
+  noLoop();
 }
 
 function draw(){
-	
+	var circles = [];
+	var minRadius = 2;
+	var maxRadius = 100;
+	var totalCircles = 500;
+	var createCircleAttempts = 500;
+
 } 
 
