@@ -1,4 +1,4 @@
-function setup()
+/*function setup()
 {
   base=createCanvas(600, 400); //Crea la base para el programa
   base.parent('espacio');  //Mete el sketch en el div con id 'espacio'
@@ -18,3 +18,23 @@ function draw(){
 	
 } 
 
+*/
+let dim = 600;
+
+function setup() {
+
+createCanvas(dim, dim);
+
+background(0);
+
+strokeWeight(dim/4);
+
+for (i=0;i<65536;i++) {
+
+stroke(random()*255, 2);
+
+point(random()*dim, random()*dim);
+
+}
+
+}

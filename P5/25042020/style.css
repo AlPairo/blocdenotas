@@ -18,10 +18,5 @@ body,html{
 	background-color: gray;
 }
 #container{
-align-self: center;
-padding: 7%;
-}
-#espacio{
-	margin: 5%;
-	padding: 0;
+	width: 100%;
 }
